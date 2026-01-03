@@ -1,3 +1,4 @@
+#Exploratory Data Analysis (EDA) for NPS Recreation Visits Dataset
 from pathlib import Path
 import pandas as pd
 
@@ -16,10 +17,11 @@ def main() -> None:
 
     print("\n=== NUMERIC SUMMARY ===")
     print(df[["Year", "RecreationVisits"]].describe().to_string())
-
+    #Total number of unique park
     print("\n=== PARK COUNTS ===")
     print(f"Number of parks: {df['ParkName'].nunique()}")
-
+    
+    #When to when is the data being used 
     print("\n=== YEAR RANGE ===")
     print(df["Year"].min(), "→", df["Year"].max())
 
