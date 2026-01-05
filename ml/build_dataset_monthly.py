@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 
-RAW_DATA_PATH = Path("data/raw/nps_recreation_visits_1979_2024.csv")
+RAW_DATA_PATH = Path("data/raw/nps_recreation_visits_monthly.csv")
 OUT_DATA_PATH = Path("data/processed/modeling_dataset_monthly.csv")
 
 def month_to_season(month: int) -> str:
@@ -16,27 +16,20 @@ def month_to_season(month: int) -> str:
 def main() -> None:
     df = pd.read_csv(RAW_DATA_PATH)
 
-    # Keep required columns
-    df = df[
-        ["ParkName", "Region", "Year", "Month", "RecreationVisits"]
-    ].copy()
-
-    df = df.rename(columns={"RecreationVisits": "target_visits"})
-
-    # Sort per park & time (CRITICAL)
+    # Sort per park & time
     df = df.sort_values(["ParkName", "Year", "Month"])
 
     # Time features
-    df["season"] = df["Month"].apply(month_to_season)
+    df["season"] = df["Month"].astype(int).apply(month_to_season)
 
-    # --- MONTHLY LAG FEATURES ---
-    group = df.groupby("ParkName")["target_visits"]
+    # Lag features per park
+    group = df.groupby("ParkName")["RecreationVisits"]
 
     df["lag_1"] = group.shift(1)
     df["lag_3"] = group.shift(3)
     df["lag_12"] = group.shift(12)
 
-    # Rolling features (shift first to avoid leakage)
+    # Rolling features (shift to avoid leakage)
     prev = group.shift(1)
     df["roll_mean_3"] = (
         prev.groupby(df["ParkName"]).rolling(3).mean()
@@ -47,17 +40,19 @@ def main() -> None:
         .reset_index(level=0, drop=True)
     )
 
-    # Drop rows without sufficient history
+    # Rename target
+    df = df.rename(columns={"RecreationVisits": "target_visits"})
+
+    # Drop rows without enough history
     df = df.dropna()
 
     OUT_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT_DATA_PATH, index=False)
 
-    print("Monthly modeling dataset created.")
-    print(f"Saved to: {OUT_DATA_PATH.resolve()}")
-    print("\nPreview:")
-    print(df.head(10).to_string(index=False))
-    print("\nShape:", df.shape)
+    print("✅ Monthly modeling dataset created")
+    print("Saved to:", OUT_DATA_PATH.resolve())
+    print("Rows:", len(df))
+    print(df.head(5).to_string(index=False))
 
 if __name__ == "__main__":
     main()
