@@ -49,7 +49,7 @@ def main() -> None:
     OUT_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT_DATA_PATH, index=False)
 
-    print("✅ Monthly modeling dataset created")
+    print(" Monthly modeling dataset created")
     print("Saved to:", OUT_DATA_PATH.resolve())
     print("Rows:", len(df))
     print(df.head(5).to_string(index=False))
