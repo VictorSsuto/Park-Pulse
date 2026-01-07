@@ -53,5 +53,20 @@
 
 ---
 
-## Project Structure
+
+---
+
+## Running the Project Locally
+
+You need **two terminals**: one for the backend and one for the frontend.
+
+---
+
+### 1️⃣ Backend (FastAPI)
+
+From the project root:
+
+```bash
+source venv/bin/activate
+uvicorn api.main:app --reload
 
