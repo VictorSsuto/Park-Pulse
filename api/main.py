@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Query, HTTPException
 from pathlib import Path
 import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
@@ -40,3 +41,14 @@ def forecast(
     ].to_dict(orient="records")
 
     return {"park": park_clean, "months": months, "forecast": records}
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
