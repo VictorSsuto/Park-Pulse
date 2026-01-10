@@ -64,16 +64,22 @@ export default function Footer() {
                   Home
                 </Link>
               </li>
+                <li>
+                <Link href="/model" className="text-white/70 hover:text-white transition-colors">
+                  Model
+                </Link>
+              </li>
+                <li>
+                <Link href="/parkRandomizer" className="text-white/70 hover:text-white transition-colors">
+                  Park Randomizer
+                </Link>
+              </li>
               <li>
                 <Link href="/about" className="text-white/70 hover:text-white transition-colors">
                   About
                 </Link>
               </li>
-              <li>
-                <Link href="/model" className="text-white/70 hover:text-white transition-colors">
-                  Model
-                </Link>
-              </li>
+            
             </ul>
           </div>
 

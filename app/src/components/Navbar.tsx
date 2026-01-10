@@ -98,9 +98,9 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/ParkRandomizer"
-            style={linkStyle("/ParkRandomizer")}
-            {...hoverProps("/ParkRandomizer")}
+            href="/parkRandomizer"
+            style={linkStyle("/parkRandomizer")}
+            {...hoverProps("/parkRandomizer")}
           >
             Park Randomizer
           </Link>

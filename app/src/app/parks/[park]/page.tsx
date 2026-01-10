@@ -2,7 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-type Crowd = "low" | "medium" | "high";
+import { getForecast } from "@/lib/api";
+
+type Crowd = "low" | "medium" | "high" | string;
 
 type ForecastRow = {
   Year: number;
@@ -19,10 +21,6 @@ type ForecastResponse = {
   forecast: ForecastRow[];
 };
 
-const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE?.replace(/\/$/, "") || "http://127.0.0.1:8000";
-
-/** 63 park quotes (poetic subtitle) */
 const PARK_QUOTES: Record<string, string> = {
   Acadia: "Where mountains greet the Atlantic at dawn.",
   "American Samoa": "Where rainforest and reef breathe as one.",
@@ -65,7 +63,7 @@ const PARK_QUOTES: Record<string, string> = {
   "Kobuk Valley": "Endless dunes beneath Arctic skies.",
   "Lake Clark": "Untamed beauty where land and water collide.",
   "Lassen Volcanic": "A restless landscape shaped by fire.",
-  "Mammoth Cave": "The world’s longest story written underground.",
+  "Mammoth Cave": "The world's longest story written underground.",
   "Mesa Verde": "Stone homes whispering stories of the past.",
   "Mount Rainier": "A solitary giant crowned in snow.",
   "New River Gorge": "Ancient river, enduring stone, endless adventure.",
@@ -93,22 +91,42 @@ function normalizeParkKey(name: string) {
   return name
     .trim()
     .replace(/[–—]/g, "-")
-    .replace(/[’ʻ]/g, "'")
+    .replace(/['ʻ]/g, "'")
     .replace("Haleakalā", "Haleakala")
     .replace("Hawaiʻi", "Hawai'i")
     .replace(/\s+/g, " ");
 }
 
 function badgeStyle(level: Crowd) {
-  if (level === "low")
-    return { bg: "#e7f6ee", fg: "#1f6a3a", border: "#bfe8cf", label: "LOW" };
-  if (level === "medium")
-    return { bg: "#fff4e5", fg: "#8a4b00", border: "#ffd8a8", label: "MEDIUM" };
-  return { bg: "#ffe9ea", fg: "#8b1d23", border: "#ffb3b7", label: "HIGH" };
+  const v = String(level).toLowerCase();
+  if (v === "low")
+    return {
+      bg: "#D1FAE5",
+      fg: "#065F46",
+      border: "#A7F3D0",
+      label: "LOW",
+      dotBg: "#10B981",
+    };
+  if (v === "medium")
+    return {
+      bg: "#FEF3C7",
+      fg: "#92400E",
+      border: "#FCD34D",
+      label: "MEDIUM",
+      dotBg: "#F59E0B",
+    };
+  return {
+    bg: "#FEE2E2",
+    fg: "#991B1B",
+    border: "#FCA5A5",
+    label: "HIGH",
+    dotBg: "#EF4444",
+  };
 }
 
 function fmtMonth(y: number, m: number) {
-  return `${y}-${String(m).padStart(2, "0")}`;
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${months[m - 1]} ${y}`;
 }
 
 function fmtInt(n: number) {
@@ -119,10 +137,7 @@ export default function ParkPage() {
   const router = useRouter();
   const params = useParams<{ park: string }>();
 
-  const park = useMemo(
-    () => decodeURIComponent(params?.park ?? "").trim(),
-    [params?.park]
-  );
+  const park = useMemo(() => decodeURIComponent(params?.park ?? "").trim(), [params?.park]);
 
   const quote = useMemo(() => {
     const key = normalizeParkKey(park);
@@ -130,38 +145,47 @@ export default function ParkPage() {
   }, [park]);
 
   const [months, setMonths] = useState(36);
-  const [data, setData] = useState<ForecastResponse | null>(null);
+  const [raw, setRaw] = useState<ForecastResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
 
   useEffect(() => {
     if (!park) return;
 
+    let cancelled = false;
+
     (async () => {
       try {
         setLoading(true);
         setErr("");
 
-        const url = `${API_BASE}/forecast?park=${encodeURIComponent(
-          park
-        )}&months=${months}`;
+        // Loads from /public/data/forecasts/<park>.json via your lib function
+        const json = (await getForecast(park)) as ForecastResponse;
 
-        const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok) {
-          const msg = await res.text();
-          throw new Error(`Forecast fetch failed (${res.status}): ${msg}`);
-        }
-
-        const json = (await res.json()) as ForecastResponse;
-        setData(json);
+        if (!cancelled) setRaw(json);
       } catch (e: any) {
-        setErr(e?.message ?? "Failed to load forecast");
-        setData(null);
+        if (!cancelled) {
+          setErr(e?.message ?? "Failed to load forecast");
+          setRaw(null);
+        }
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     })();
-  }, [park, months]);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [park]);
+
+  const data = useMemo<ForecastResponse | null>(() => {
+    if (!raw) return null;
+    return {
+      ...raw,
+      months,
+      forecast: Array.isArray(raw.forecast) ? raw.forecast.slice(0, months) : [],
+    };
+  }, [raw, months]);
 
   const summary = useMemo(() => {
     const rows = data?.forecast ?? [];
@@ -169,216 +193,157 @@ export default function ParkPage() {
 
     const counts = rows.reduce(
       (acc, r) => {
-        acc[r.crowd_level] += 1;
+        const k = String(r.crowd_level).toLowerCase() as "low" | "medium" | "high";
+        if (k === "low" || k === "medium" || k === "high") acc[k] += 1;
         return acc;
       },
-      { low: 0, medium: 0, high: 0 } as Record<Crowd, number>
+      { low: 0, medium: 0, high: 0 }
     );
 
-    const thresholds = {
-      low: rows[0].low_threshold,
-      high: rows[0].high_threshold,
-    };
-
-    return { counts, thresholds };
+    return { counts };
   }, [data]);
 
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        padding: 32,
-        background:
-          "linear-gradient(180deg, #e7efe7 0%, #f3f7f3 60%, #ffffff 100%)",
-      }}
-    >
-          <div style={{ maxWidth: 1100, margin: "0 auto", paddingTop: 24 }}></div>
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        {/* Top bar (now only back + title/quote) */}
-        <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
-          <div>
-           
+    <main className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 text-white">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
 
-            <h1
-              style={{
-                marginTop: 10,
-                fontSize: 44,
-                fontWeight: 950,
-                color: "#1f3d2b",
-                letterSpacing: -0.6,
-              }}
-            >
-              {park}
-            </h1>
+        <div className="relative max-w-6xl mx-auto px-6 py-16">
+          {/* Back Button */}
+          <button
+            onClick={() => router.push("/")}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 mb-6 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="text-sm font-bold">Back to Map</span>
+          </button>
 
-            <div
-              style={{
-                marginTop: 8,
-                color: "#4b6b57",
-                fontSize: 16,
-                fontWeight: 500,
-                fontStyle: "italic",
-                maxWidth: 760,
-              }}
-            >
-              “{quote}”
+          <h1 className="text-5xl md:text-6xl font-black mb-4 leading-tight">{park}</h1>
+
+          <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl leading-relaxed italic">"{quote}"</p>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        {/* Error Display */}
+        {err && (
+          <div className="bg-red-50 border border-red-200 rounded-2xl p-6 mb-6">
+            <div className="flex items-center gap-3">
+              <svg className="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <div className="font-bold text-red-900 mb-1">Error Loading Forecast</div>
+                <div className="text-red-700">{err}</div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Loading State */}
+        {loading && (
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-12 text-center">
+            <div className="inline-block w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+            <p className="text-gray-600 font-semibold">Loading forecast data...</p>
+          </div>
+        )}
+
+        {/* Summary Cards */}
+        {!loading && summary && (
+          <div className="grid md:grid-cols-4 gap-6 mb-8">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div className="text-sm font-bold text-gray-600 mb-2">Forecast Period</div>
+              <div className="text-4xl font-black text-gray-900 mb-1">{data?.forecast.length || 0}</div>
+              <div className="text-sm text-gray-600">months ahead</div>
             </div>
 
-            <div style={{ marginTop: 14, height: 1, background: "#e2ebe2", maxWidth: 680 }} />
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 shadow-lg border border-emerald-100">
+              <div className="text-sm font-bold text-emerald-900 mb-2">Low Crowd</div>
+              <div className="text-4xl font-black text-emerald-900 mb-1">{summary.counts.low}</div>
+              <div className="text-sm text-emerald-700">quieter months</div>
+            </div>
 
-           
-          </div>
-        </div>
+            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 shadow-lg border border-amber-100">
+              <div className="text-sm font-bold text-amber-900 mb-2">Medium Crowd</div>
+              <div className="text-4xl font-black text-amber-900 mb-1">{summary.counts.medium}</div>
+              <div className="text-sm text-amber-700">moderate months</div>
+            </div>
 
-        {/* Status */}
-        {err && (
-          <div
-            style={{
-              marginTop: 18,
-              padding: 12,
-              borderRadius: 12,
-              border: "1px solid #e5baba",
-              background: "#fff5f5",
-              color: "#8b2c2c",
-              fontSize: 14,
-            }}
-          >
-            {err}
+            <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-6 shadow-lg border border-red-100">
+              <div className="text-sm font-bold text-red-900 mb-2">High Crowd</div>
+              <div className="text-4xl font-black text-red-900 mb-1">{summary.counts.high}</div>
+              <div className="text-sm text-red-700">busy months</div>
+            </div>
           </div>
         )}
 
-        {loading && (
-          <div style={{ marginTop: 18, color: "#4b6b57", fontWeight: 700 }}>
-            Loading forecast…
-          </div>
-        )}
-
-        {/* Summary chips */}
-        {!loading && summary && (
-          <div style={{ marginTop: 18, display: "flex", gap: 10, flexWrap: "wrap" }}>
-            {(["low", "medium", "high"] as Crowd[]).map((lvl) => {
-              const b = badgeStyle(lvl);
-              return (
-                <div
-                  key={lvl}
-                  style={{
-                    padding: "10px 12px",
-                    borderRadius: 14,
-                    border: `1px solid ${b.border}`,
-                    background: b.bg,
-                    color: b.fg,
-                    fontWeight: 900,
-                    fontSize: 13,
-                  }}
-                >
-                  {b.label}: {summary.counts[lvl]} months
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        {/* Tableau-style table */}
+        {/* Forecast Table */}
         {!loading && data?.forecast?.length ? (
-          <div
-            style={{
-              marginTop: 18,
-              borderRadius: 18,
-              overflow: "hidden",
-              border: "1px solid #dde6dd",
-              background: "white",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
-            }}
-          >
-            {/* Header row WITH months selector on the right */}
-            <div
-              style={{
-                padding: 14,
-                background: "#f1f6f1",
-                borderBottom: "1px solid #e2ebe2",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: 12,
-              }}
-            >
-              <div style={{ fontWeight: 950, color: "#1f3d2b" }}>Forecast Tableau</div>
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+            <div className="bg-gradient-to-r from-emerald-50 to-teal-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+              <div>
+                <h2 className="text-2xl font-black text-gray-900">Forecast Details</h2>
+                <p className="text-sm text-gray-600 mt-1">Monthly predictions based on historical patterns</p>
+              </div>
 
-              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <div style={{ fontSize: 12, fontWeight: 800, color: "#4b6b57" }}>
-                  Months
-                </div>
+              <div className="flex items-center gap-3">
+                <label className="text-sm font-bold text-gray-700">Period:</label>
                 <select
                   value={months}
                   onChange={(e) => setMonths(Number(e.target.value))}
-                  style={{
-                    padding: "8px 10px",
-                    borderRadius: 12,
-                    border: "1px solid #d4e3d6",
-                    background: "#ffffff",
-                    fontWeight: 800,
-                    color: "#1f3d2b",
-                    cursor: "pointer",
-                  }}
+                  className="px-4 py-2 rounded-full border-2 border-emerald-200 bg-white font-bold text-gray-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent cursor-pointer"
                 >
-                  <option value={12}>12</option>
-                  <option value={24}>24</option>
-                  <option value={36}>36</option>
+                  <option value={12}>12 months</option>
+                  <option value={24}>24 months</option>
+                  <option value={36}>36 months</option>
                 </select>
               </div>
             </div>
 
-            <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <div className="overflow-x-auto">
+              <table className="w-full">
                 <thead>
-                  <tr style={{ textAlign: "left", fontSize: 12, color: "#4b6b57" }}>
-                    <th style={{ padding: "12px 14px" }}>Month</th>
-                    <th style={{ padding: "12px 14px" }}>Predicted visits</th>
-                    <th style={{ padding: "12px 14px" }}>Crowding</th>
+                  <tr className="bg-gray-50 border-b border-gray-200">
+                    <th className="px-6 py-4 text-left text-xs font-black text-gray-600 uppercase tracking-wider">
+                      Month
+                    </th>
+                    <th className="px-6 py-4 text-left text-xs font-black text-gray-600 uppercase tracking-wider">
+                      Predicted Visits
+                    </th>
+                    <th className="px-6 py-4 text-left text-xs font-black text-gray-600 uppercase tracking-wider">
+                      Crowd Level
+                    </th>
                   </tr>
                 </thead>
-
-                <tbody>
-                  {data.forecast.map((r, idx) => {
-                    const b = badgeStyle(r.crowd_level);
-                    const zebra = idx % 2 === 0 ? "#ffffff" : "#fafcf9";
-
+                <tbody className="divide-y divide-gray-100">
+                  {data.forecast.map((row, idx) => {
+                    const badge = badgeStyle(row.crowd_level);
                     return (
-                      <tr key={`${r.Year}-${r.Month}-${idx}`} style={{ background: zebra }}>
-                        <td style={{ padding: "12px 14px", fontWeight: 800, color: "#1f3d2b" }}>
-                          {fmtMonth(r.Year, r.Month)}
+                      <tr key={`${row.Year}-${row.Month}-${idx}`} className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                            <span className="font-bold text-gray-900">{fmtMonth(row.Year, row.Month)}</span>
+                          </div>
                         </td>
-
-                        <td style={{ padding: "12px 14px", color: "#1f3d2b", fontWeight: 700 }}>
-                          {fmtInt(r.predicted_visits)}
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <span className="text-lg font-bold text-gray-900">{fmtInt(row.predicted_visits)}</span>
+                          <span className="text-sm text-gray-500 ml-2">visitors</span>
                         </td>
-
-                        <td style={{ padding: "12px 14px" }}>
+                        <td className="px-6 py-4 whitespace-nowrap">
                           <span
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold text-sm"
                             style={{
-                              display: "inline-flex",
-                              alignItems: "center",
-                              gap: 8,
-                              padding: "7px 10px",
-                              borderRadius: 999,
-                              border: `1px solid ${b.border}`,
-                              background: b.bg,
-                              color: b.fg,
-                              fontWeight: 950,
-                              fontSize: 12,
-                              letterSpacing: 0.4,
+                              background: badge.bg,
+                              color: badge.fg,
+                              border: `2px solid ${badge.border}`,
                             }}
                           >
-                            <span
-                              style={{
-                                width: 10,
-                                height: 10,
-                                borderRadius: 999,
-                                background: b.fg,
-                                display: "inline-block",
-                              }}
-                            />
-                            {b.label}
+                            <span className="w-2 h-2 rounded-full" style={{ background: badge.dotBg }} />
+                            {badge.label}
                           </span>
                         </td>
                       </tr>
@@ -390,23 +355,23 @@ export default function ParkPage() {
           </div>
         ) : null}
 
+        {/* No Data Message */}
         {!loading && !err && (!data?.forecast || data.forecast.length === 0) && (
-          <div style={{ marginTop: 18, color: "#4b6b57" }}>No forecast rows returned.</div>
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-12 text-center">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-100 flex items-center justify-center">
+              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+                />
+              </svg>
+            </div>
+            <p className="text-gray-600 font-semibold">No forecast data available for this park</p>
+          </div>
         )}
       </div>
-      <div
-  style={{
-    marginTop: 48,
-    padding: "18px 0 6px",
-    textAlign: "center",
-    fontSize: 13,
-    color: "#6b7f71",
-    fontWeight: 650,
-  }}
->
-  <span style={{ opacity: 0.8 }}>🌲</span> Park Pulse · Developed by Victor Ssuto
-</div>
-
     </main>
   );
 }

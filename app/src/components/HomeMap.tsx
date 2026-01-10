@@ -53,22 +53,33 @@ function makeDotIcon(color: string) {
   });
 }
 
-/** Small helper component to imperatively control the map */
 function MapFocus({ focus }: { focus: Focus | null }) {
   const map = useMap();
 
   useEffect(() => {
     if (!focus) return;
-    const z = focus.zoom ?? 6;
 
-    map.flyTo([focus.lat, focus.lng], z, {
-      duration: 0.9,
-      easeLinearity: 0.25,
-    });
+    const lat = Number(focus.lat);
+    const lng = Number(focus.lng);
+    const z = Number.isFinite(focus.zoom) ? focus.zoom! : 6;
+
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+
+    const nextZoom = Math.max(map.getZoom(), z);
+
+    // run after Leaflet settles
+    setTimeout(() => {
+      map.flyTo([lat, lng], nextZoom, {
+        animate: true,
+        duration: 0.9,
+        easeLinearity: 0.25,
+      });
+    }, 0);
   }, [focus, map]);
 
   return null;
 }
+
 
 export default function HomeMap({
   points,
@@ -126,8 +137,8 @@ export default function HomeMap({
           scrollWheelZoom
           style={{ height: "100%", width: "100%", zIndex: 0 }}
           maxBounds={[
-                 [-35, -180], // ✅ include American Samoa
-                [80, -50],
+            [-35, -180], // include American Samoa
+            [80, -50],
           ]}
           maxBoundsViscosity={1.0}
         >
@@ -144,16 +155,17 @@ export default function HomeMap({
             spiderfyOnMaxZoom
             showCoverageOnHover={false}
             maxClusterRadius={44}
-             spiderLegPolylineOptions={{ weight: 1.2, opacity: 0.35 }}
-            disableClusteringAtZoom={7}   // ✅ at max zoom, show individual parks
+            spiderLegPolylineOptions={{ weight: 1.2, opacity: 0.35 }}
+            disableClusteringAtZoom={7}
           >
             {points.map((p) => (
               <Marker
                 key={`${p.ParkName}-${p.Latitude}-${p.Longitude}`}
-                position={[p.Latitude, p.Longitude]}
+                position={[Number(p.Latitude), Number(p.Longitude)]}
                 icon={icons[p.crowd_level]}
                 eventHandlers={{
-                  click: () => router.push(`/parks/${encodeURIComponent(p.ParkName)}`),
+                  click: () =>
+                    router.push(`/parks/${encodeURIComponent(p.ParkName)}`),
                 }}
               >
                 <Tooltip direction="top" offset={[0, -6]} opacity={1} sticky>

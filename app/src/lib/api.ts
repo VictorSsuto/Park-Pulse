@@ -1,22 +1,56 @@
-const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE?.replace(/\/$/, "") || "http://127.0.0.1:8000";
+// app/src/lib/api.ts
 
-export async function getParks(): Promise<{ count: number; parks: string[] }> {
-  const res = await fetch(`${API_BASE}/parks`, { cache: "no-store" });
-  if (!res.ok) {
-    throw new Error(`GET /parks failed: ${res.status}`);
-  }
+export type Crowd = "low" | "medium" | "high";
+
+export type ForecastRow = {
+  Year: number;
+  Month: number;
+  predicted_visits: number;
+  crowd_level: Crowd;
+  low_threshold?: number;
+  high_threshold?: number;
+};
+
+export type ForecastResponse = {
+  park: string;
+  months: number;
+  forecast: ForecastRow[];
+};
+
+export async function getParks(): Promise<{ parks: string[] }> {
+  // Static file served from /public/data/parks.json
+  const res = await fetch("/data/parks.json", { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load parks.json (${res.status})`);
   return res.json();
 }
 
-export async function getForecast(park: string, months = 36) {
-  const url = new URL(`${API_BASE}/forecast`);
-  url.searchParams.set("park", park);
-  url.searchParams.set("months", String(months));
+function normalizeFileName(park: string) {
+  // Must match your forecast filenames in /public/data/forecasts/
+  // Example: "Wrangell-St. Elias" -> "wrangell-st-elias"
+  return park
+    .trim()
+    .toLowerCase()
+    .replace(/[’ʻ]/g, "'")
+    .replace(/['"]/g, "")
+    .replace(/&/g, "and")
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
 
-  const res = await fetch(url.toString(), { cache: "no-store" });
-  if (!res.ok) {
-    throw new Error(`GET /forecast failed: ${res.status}`);
-  }
-  return res.json();
+export async function getForecast(park: string, months = 36): Promise<ForecastResponse> {
+  // Static per-park forecast file
+  const file = normalizeFileName(park);
+  const res = await fetch(`/data/forecasts/${file}.json`, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Missing forecast file for "${park}" -> ${file}.json`);
+  const json = await res.json();
+
+  // If your stored JSON already includes months/park/forecast, keep it.
+  // If not, adapt here.
+  const forecast = Array.isArray(json.forecast) ? json.forecast : (Array.isArray(json) ? json : []);
+  return {
+    park: json.park ?? park,
+    months: json.months ?? months,
+    forecast: forecast.slice(0, months),
+  };
 }

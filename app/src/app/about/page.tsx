@@ -11,9 +11,9 @@ export default function AboutPage() {
         
         <div className="relative max-w-6xl mx-auto px-6 py-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-            <span className="text-sm font-bold">Second Year CS Student</span>
+            <span className="text-sm font-bold">About Park Pulse</span>
             <span className="text-white/60">•</span>
-            <span className="text-sm">Concordia University</span>
+            <span className="text-sm">A personal project</span>
           </div>
           
           <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
@@ -31,8 +31,8 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-gray-900">Why I Built This</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              I built Park Pulse as a way to combine two things I care deeply about: understanding data and spending time in national parks.
+         <p className="text-lg text-gray-700 leading-relaxed">
+            Hi, I’m Victor Ssuto, a second-year student at Concordia University. I built Park Pulse to bring together two things I care deeply about: making sense of data and exploring national parks.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               This project started as a technical challenge, but it quickly became something more personal. National parks have always been places where I slow down, reflect, and reset. Park Pulse is my way of exploring how data can help us better understand and protect those places.

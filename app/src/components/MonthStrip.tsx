@@ -29,8 +29,8 @@ function pillStyle(level: Crowd, active: boolean) {
     padding: "8px 12px",
     borderRadius: 999,
     border: `1px solid ${active ? themed.border : "#d7e2d7"}`,
-    background: active ? themed.bg : "#f3f7f3",          // ✅ readable inactive
-    color: active ? themed.text : "#2b3a2f",            // ✅ readable inactive
+    background: active ? themed.bg : "#f3f7f3",          
+    color: active ? themed.text : "#2b3a2f",            
     fontSize: 12,
     fontWeight: 800,
     letterSpacing: 0.4,
