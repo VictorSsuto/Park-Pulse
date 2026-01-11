@@ -5,7 +5,7 @@ import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,6 +33,8 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+                <SpeedInsights />
+
         <Footer />
       </body>
     </html>
