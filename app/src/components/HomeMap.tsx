@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { MapContainer, TileLayer, Marker, Tooltip, useMap } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
+import type { Map as LeafletMap } from "leaflet";
 import { useRouter } from "next/navigation";
 
 type Crowd = "low" | "medium" | "high";
@@ -69,8 +70,11 @@ function MapFocus({ focus }: { focus: Focus | null }) {
 
     requestAnimationFrame(() => {
       try {
-      const nextZoom = z;
-        map.flyTo([lat, lng], nextZoom, { animate: true, duration: 0.9, easeLinearity: 0.25 });
+        map.flyTo([lat, lng], z, {
+          animate: true,
+          duration: 0.9,
+          easeLinearity: 0.25,
+        });
       } catch {}
     });
   }, [map, focus?.lat, focus?.lng, focus?.zoom]);
@@ -78,17 +82,23 @@ function MapFocus({ focus }: { focus: Focus | null }) {
   return null;
 }
 
-export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus: Focus | null }) {
+export default function HomeMap({
+  points,
+  focus,
+}: {
+  points: ParkPoint[];
+  focus: Focus | null;
+}) {
   const router = useRouter();
 
   const [mounted, setMounted] = useState(false);
-  const [map, setMap] = useState<L.Map | null>(null);
   const [mapReady, setMapReady] = useState(false);
 
-  // ✅ always runs (no early return before other hooks)
+  // ✅ use ref instead of whenCreated (TS-safe in react-leaflet v4+)
+  const mapRef = useRef<LeafletMap | null>(null);
+
   useEffect(() => setMounted(true), []);
 
-  // ✅ safePoints / icons are always computed (hook order stable)
   const icons = useMemo<Record<Crowd, L.DivIcon>>(
     () => ({
       low: makeDotIcon(crowdColor("low")),
@@ -100,8 +110,8 @@ export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus:
 
   const safePoints = useMemo(() => {
     return (points || []).filter((p) => {
-      const lat = Number(p.Latitude);
-      const lng = Number(p.Longitude);
+      const lat = Number(p?.Latitude);
+      const lng = Number(p?.Longitude);
       return (
         p &&
         typeof p.ParkName === "string" &&
@@ -112,8 +122,9 @@ export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus:
     });
   }, [points]);
 
-  // ✅ invalidateSize AFTER we have a map
+  // ✅ invalidateSize AFTER map exists
   useEffect(() => {
+    const map = mapRef.current;
     if (!map) return;
 
     const kick = () => {
@@ -131,7 +142,7 @@ export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus:
       window.clearTimeout(t2);
       window.removeEventListener("resize", kick);
     };
-  }, [map]);
+  }, [mapReady]);
 
   return (
     <div
@@ -154,15 +165,19 @@ export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus:
           alignItems: "center",
         }}
       >
-        <div style={{ fontWeight: 900, color: "#1f3d2b" }}>National Parks — Crowd Forecast Map</div>
-        <div style={{ fontSize: 12, color: "#4b6b57", fontWeight: 700 }}>Click a park</div>
+        <div style={{ fontWeight: 900, color: "#1f3d2b" }}>
+          National Parks — Crowd Forecast Map
+        </div>
+        <div style={{ fontSize: 12, color: "#4b6b57", fontWeight: 700 }}>
+          Click a park
+        </div>
       </div>
 
       {/* Map */}
       <div style={{ height: 420, position: "relative", zIndex: 0 }}>
-        {/* ✅ render the map ONLY after mounted, but without early-returning */}
         {mounted ? (
           <MapContainer
+            ref={mapRef}
             center={[39.5, -98.35]}
             zoom={3}
             minZoom={3}
@@ -174,19 +189,17 @@ export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus:
               [80, -50],
             ]}
             maxBoundsViscosity={1.0}
-            whenCreated={(m) => setMap(m)}
             whenReady={() => {
               setMapReady(true);
               setTimeout(() => {
                 try {
-                  map?.invalidateSize();
+                  mapRef.current?.invalidateSize();
                 } catch {}
               }, 0);
             }}
           >
             <MapFocus focus={focus} />
 
-            {/* Render layers only when leaflet is ready */}
             {mapReady && (
               <>
                 <TileLayer
@@ -219,7 +232,8 @@ export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus:
                         <Tooltip direction="top" offset={[0, -6]} opacity={1} sticky>
                           <div style={{ fontWeight: 800 }}>{p.ParkName}</div>
                           <div style={{ fontSize: 12 }}>
-                            {p.Year}-{String(p.Month).padStart(2, "0")} • {p.crowd_level.toUpperCase()}
+                            {p.Year}-{String(p.Month).padStart(2, "0")} •{" "}
+                            {p.crowd_level.toUpperCase()}
                           </div>
                         </Tooltip>
                       </Marker>
@@ -230,7 +244,6 @@ export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus:
             )}
           </MapContainer>
         ) : (
-          // optional placeholder to preserve height
           <div style={{ height: "100%", width: "100%" }} />
         )}
       </div>
