@@ -1,47 +1,57 @@
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { getParks } from "@/lib/api";
+
+export type ParkIndexItem = {
+  name: string;
+  slug: string;
+  lat: number;
+  lng: number;
+};
 
 type Props = {
   value: string;
   onChange: (v: string) => void;
-  onSelect: (park: string) => void;
+  /** Canonical selection (slug) */
+  onSelect: (slug: string) => void;
+  /** Optional: full park object (for map zoom) */
+  onSelectPark?: (park: ParkIndexItem) => void;
 };
 
-function titleCase(s: string) {
-  return s
-    .toLowerCase()
-    .replace(/\b\w/g, (c) => c.toUpperCase());
-}
-
-export default function ParkSearch({ value, onChange, onSelect }: Props) {
-  const [parks, setParks] = useState<string[]>([]);
+export default function ParkSearch({ value, onChange, onSelect, onSelectPark }: Props) {
+  const [parks, setParks] = useState<ParkIndexItem[]>([]);
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
 
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const listRef = useRef<HTMLDivElement | null>(null);
 
+  // Load parks from parks_index.json
   useEffect(() => {
     let alive = true;
 
-    async function load() {
+    (async () => {
       try {
         setLoading(true);
         setError("");
 
-        const data = await getParks();
-        if (!data || !Array.isArray(data.parks)) throw new Error("Invalid parks response");
+        const res = await fetch("/data/parks_index.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to load parks_index.json");
 
-        const normalized = data.parks
-          .map((p: string) => titleCase(p.trim()))
-          .filter(Boolean)
-          .sort((a: string, b: string) => a.localeCompare(b));
-
+        const arr = (await res.json()) as ParkIndexItem[];
         if (!alive) return;
+
+        const normalized = (Array.isArray(arr) ? arr : [])
+          .map((p) => ({
+            name: String((p as any)?.name ?? "").trim(),
+            slug: String((p as any)?.slug ?? "").trim(),
+            lat: Number((p as any)?.lat),
+            lng: Number((p as any)?.lng),
+          }))
+          .filter((p) => p.name && p.slug && Number.isFinite(p.lat) && Number.isFinite(p.lng))
+          .sort((a, b) => a.name.localeCompare(b.name));
+
         setParks(normalized);
       } catch {
         if (!alive) return;
@@ -51,27 +61,14 @@ export default function ParkSearch({ value, onChange, onSelect }: Props) {
         if (!alive) return;
         setLoading(false);
       }
-    }
+    })();
 
-    load();
     return () => {
       alive = false;
     };
   }, []);
 
-  const filtered = useMemo(() => {
-    const q = value.trim().toLowerCase();
-    if (!q) return parks; // IMPORTANT: empty query = show all parks
-    return parks.filter((p) => p.toLowerCase().includes(q));
-  }, [value, parks]);
-
-  // Render a sane amount but keep scroll
-  const visible = useMemo(() => filtered.slice(0, 200), [filtered]);
-
-  useEffect(() => {
-    setActiveIndex(0);
-  }, [value]);
-
+  // Close on outside click
   useEffect(() => {
     function onDocMouseDown(e: MouseEvent) {
       if (!wrapperRef.current) return;
@@ -81,142 +78,69 @@ export default function ParkSearch({ value, onChange, onSelect }: Props) {
     return () => document.removeEventListener("mousedown", onDocMouseDown);
   }, []);
 
-  function select(park: string) {
-    onSelect(park);
-    onChange(park);
+  useEffect(() => setActiveIndex(0), [value]);
+
+  const filtered = useMemo(() => {
+    const q = value.trim().toLowerCase();
+    if (!q) return parks;
+    return parks.filter((p) => p.name.toLowerCase().includes(q) || p.slug.toLowerCase().includes(q));
+  }, [value, parks]);
+
+  const visible = useMemo(() => filtered.slice(0, 80), [filtered]);
+
+  function selectPark(park: ParkIndexItem) {
+    onChange(park.name); // keep nice label
+    onSelectPark?.(park);
+    onSelect(park.slug); // ALWAYS set canonical slug too (important)
     setOpen(false);
   }
 
-  function ensureVisible(index: number) {
-    const list = listRef.current;
-    if (!list) return;
-    const item = list.querySelector<HTMLElement>(`[data-idx="${index}"]`);
-    if (!item) return;
-
-    const itemTop = item.offsetTop;
-    const itemBottom = itemTop + item.offsetHeight;
-    const viewTop = list.scrollTop;
-    const viewBottom = viewTop + list.clientHeight;
-
-    if (itemTop < viewTop) list.scrollTop = itemTop;
-    else if (itemBottom > viewBottom) list.scrollTop = itemBottom - list.clientHeight;
-  }
-
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (!open) {
-      if (e.key === "ArrowDown" || e.key === "Enter") setOpen(true);
+    if (!open && (e.key === "ArrowDown" || e.key === "Enter")) {
+      setOpen(true);
       return;
     }
 
     if (e.key === "Escape") {
-      e.preventDefault();
       setOpen(false);
       return;
     }
 
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      setActiveIndex((i) => {
-        const next = Math.min(i + 1, Math.max(visible.length - 1, 0));
-        requestAnimationFrame(() => ensureVisible(next));
-        return next;
-      });
+      setActiveIndex((i) => Math.min(i + 1, visible.length - 1));
       return;
     }
 
     if (e.key === "ArrowUp") {
       e.preventDefault();
-      setActiveIndex((i) => {
-        const next = Math.max(i - 1, 0);
-        requestAnimationFrame(() => ensureVisible(next));
-        return next;
-      });
+      setActiveIndex((i) => Math.max(i - 1, 0));
       return;
     }
 
     if (e.key === "Enter") {
       e.preventDefault();
       const choice = visible[activeIndex];
-      if (choice) select(choice);
+      if (choice) selectPark(choice);
     }
   }
 
-  // IMPORTANT: dropdown panel appears whenever open, even if loading/error/no results
-  const showPanel = open;
-
-  const showNoMatches =
-    !loading && !error && value.trim().length > 0 && visible.length === 0;
-
   return (
-    <div ref={wrapperRef} style={{ position: "relative", width: "100%" }}>
-      <label
-        style={{
-          display: "block",
-          marginBottom: 8,
-          fontSize: 14,
-          fontWeight: 800,
-          color: "#374151",
-        }}
-      >
-        Search parks
-      </label>
-
-      <div style={{ position: "relative" }}>
-        {/* Search Icon */}
-        <div
-          style={{
-            position: "absolute",
-            left: 16,
-            top: "50%",
-            transform: "translateY(-50%)",
-            color: "#6B7280",
-            pointerEvents: "none",
-          }}
-        >
-          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
-
+    <div ref={wrapperRef} className="relative w-full">
+      {/* Input */}
+      <div className="relative">
+        <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">🔎</span>
         <input
           value={value}
-          placeholder={loading ? "Loading parks…" : "Try 'Yosemite' or 'Yellowstone'..."}
+          placeholder={loading ? "Loading parks…" : "Search parks…"}
           onChange={(e) => {
             onChange(e.target.value);
             setOpen(true);
           }}
           onFocus={() => setOpen(true)}
           onKeyDown={handleKeyDown}
-          aria-expanded={open}
-          aria-autocomplete="list"
-          autoComplete="off"
-          spellCheck={false}
-          style={{
-            width: "100%",
-            height: 48,
-            paddingLeft: 48,
-            paddingRight: value ? 48 : 16,
-            borderRadius: 9999,
-            border: open ? "1.5px solid #10B981" : "1.5px solid #E5E7EB",
-            background: "#ffffff",
-            color: "#111827",
-            caretColor: "#10B981",
-            fontSize: 15,
-            fontWeight: 650,
-            outline: "none",
-            boxShadow: open
-              ? "0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 0 0 4px rgba(16, 185, 129, 0.12)"
-              : "0 6px 10px -6px rgba(0, 0, 0, 0.18)",
-            transition: "all 0.2s",
-          }}
+          className="w-full h-12 rounded-full pl-11 pr-11 border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
         />
-
-        {/* Clear Button */}
         {value && (
           <button
             type="button"
@@ -224,195 +148,64 @@ export default function ParkSearch({ value, onChange, onSelect }: Props) {
               onChange("");
               setOpen(true);
             }}
-            style={{
-              position: "absolute",
-              right: 16,
-              top: "50%",
-              transform: "translateY(-50%)",
-              width: 32,
-              height: 32,
-              borderRadius: 9999,
-              border: "none",
-              background: "transparent",
-              color: "#6B7280",
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#F3F4F6";
-              e.currentTarget.style.color = "#111827";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = "#6B7280";
-            }}
-            aria-label="Clear search"
+            className="absolute right-3 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full hover:bg-gray-100 text-gray-500"
+            aria-label="Clear"
           >
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            ✕
           </button>
         )}
-
-        {/* Autofill fix */}
-        <style jsx>{`
-          input:-webkit-autofill,
-          input:-webkit-autofill:hover,
-          input:-webkit-autofill:focus {
-            -webkit-text-fill-color: #111827;
-            -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
-            transition: background-color 5000s ease-in-out 0s;
-          }
-        `}</style>
       </div>
 
       {/* Dropdown */}
-      {showPanel && (
-        <div
-          style={{
-            position: "absolute",
-            top: "100%",
-            left: 0,
-            right: 0,
-            marginTop: 8,
-            borderRadius: 16,
-            background: "#ffffff",
-            border: "1px solid #E5E7EB",
-            boxShadow:
-              "0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-            zIndex: 50,
-            overflow: "hidden",
-          }}
-          onWheelCapture={(e) => e.stopPropagation()}
-          onTouchMoveCapture={(e) => e.stopPropagation()}
-          onPointerDownCapture={(e) => e.stopPropagation()}
-        >
+      {open && (
+        <div className="absolute left-0 right-0 mt-2 rounded-2xl border border-gray-200 bg-white shadow-2xl z-50 overflow-hidden">
           {/* Header */}
-          <div
-            style={{
-              padding: "12px 16px",
-              background: "linear-gradient(to right, #D1FAE5, #A7F3D0)",
-              borderBottom: "1px solid #E5E7EB",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <span
-              style={{
-                fontSize: 12,
-                fontWeight: 800,
-                color: "#065F46",
-                textTransform: "uppercase",
-                letterSpacing: "0.05em",
-              }}
-            >
-              {value.trim() ? "Matches" : "All parks"}
-            </span>
-            <span style={{ fontSize: 12, fontWeight: 800, color: "#065F46" }}>
-              {loading ? "Loading…" : error ? "Error" : `${filtered.length}`}
-            </span>
+          <div className="flex items-center justify-between px-4 py-3 bg-emerald-50 border-b border-emerald-100">
+            <div className="text-xs font-black tracking-wider text-emerald-900 uppercase">Matches</div>
+            <div className="text-xs font-bold text-emerald-900/70">{visible.length}</div>
           </div>
 
           {/* Body */}
-          <div
-            ref={listRef}
-            style={{
-              maxHeight: 320,
-              overflowY: "auto",
-              overscrollBehavior: "contain",
-              padding: 8,
-            }}
-          >
-            {loading && (
-              <div style={{ padding: 12, fontSize: 14, color: "#374151", fontWeight: 600 }}>
-                Fetching parks list…
-              </div>
+          <div className="max-h-80 overflow-y-auto p-2">
+            {loading && <div className="p-3 text-sm text-gray-700">Loading…</div>}
+            {error && <div className="p-3 text-sm text-red-600">{error}</div>}
+
+            {!loading && !error && visible.length === 0 && (
+              <div className="p-3 text-sm text-gray-600">No parks found.</div>
             )}
 
-            {!loading && error && (
-              <div style={{ padding: 12, fontSize: 14, color: "#991B1B", fontWeight: 700 }}>
-                {error}
-              </div>
-            )}
-
-            {showNoMatches && (
-              <div style={{ padding: 12, fontSize: 14, color: "#6B7280" }}>
-                No parks match "{value}"
-              </div>
-            )}
-
-            {!loading && !error && visible.length > 0 && (
-              <>
-                {visible.map((park, idx) => {
-                  const isActive = idx === activeIndex;
-                  return (
-                    <button
-                      key={`${park}-${idx}`}
-                      type="button"
-                      data-idx={idx}
-                      onClick={() => select(park)}
-                      onMouseEnter={() => setActiveIndex(idx)}
-                      style={{
-                        width: "100%",
-                        textAlign: "left",
-                        padding: "12px",
-                        borderRadius: 12,
-                        background: isActive
-                          ? "linear-gradient(to right, #D1FAE5, #A7F3D0)"
-                          : "transparent",
-                        border: isActive ? "2px solid #10B981" : "2px solid transparent",
-                        cursor: "pointer",
-                        color: "#111827",
-                        fontSize: 14,
-                        fontWeight: isActive ? 800 : 600,
-                        transition: "all 0.15s",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 12,
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: 8,
-                          height: 8,
-                          borderRadius: 9999,
-                          background: isActive ? "#10B981" : "#D1D5DB",
-                          flexShrink: 0,
-                          transition: "all 0.15s",
-                        }}
-                      />
-                      <span
-                        style={{
-                          flex: 1,
-                          minWidth: 0,
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                        }}
-                      >
-                        {park}
-                      </span>
-                    </button>
-                  );
-                })}
-              </>
-            )}
+            {!loading &&
+              !error &&
+              visible.map((park, idx) => {
+                const active = idx === activeIndex;
+                return (
+                  <button
+                    key={park.slug}
+                    type="button"
+                    onClick={() => selectPark(park)}
+                    onMouseEnter={() => setActiveIndex(idx)}
+                    className={[
+                      "w-full text-left px-4 py-3 rounded-xl transition",
+                      "border border-transparent",
+                      active
+                        ? "bg-emerald-100 border-emerald-200 text-gray-900"
+                        : "hover:bg-gray-50 text-gray-900",
+                    ].join(" ")}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                      <div className="flex-1 min-w-0">
+                        <div className="font-semibold text-gray-900 truncate">{park.name}</div>
+                        <div className="text-xs text-gray-500 truncate">{park.slug}</div>
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
           </div>
 
-          {/* Footer */}
-          <div
-            style={{
-              padding: "10px 16px",
-              background: "#F9FAFB",
-              borderTop: "1px solid #E5E7EB",
-              fontSize: 11,
-              color: "#6B7280",
-              textAlign: "center",
-            }}
-          >
+          {/* Footer hint */}
+          <div className="px-4 py-2 border-t border-gray-100 text-xs text-gray-500">
             Use ↑ ↓ to navigate, Enter to select, Esc to close
           </div>
         </div>

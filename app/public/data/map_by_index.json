@@ -15,6 +15,15 @@
           "Longitude": -119.7785
         },
         {
+          "ParkName": "Yellowstone",
+          "Year": 2025,
+          "Month": 12,
+          "predicted_visits": 24656.525,
+          "crowd_level": "low",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
+        },
+        {
           "ParkName": "Grand Teton",
           "Year": 2025,
           "Month": 12,
@@ -114,6 +123,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 25313.555,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2025,
           "Month": 12,
@@ -157,6 +175,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2025,
+          "Month": 9,
+          "predicted_visits": 125348.095,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -204,6 +231,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2025,
+          "Month": 12,
+          "predicted_visits": 247997.855,
+          "crowd_level": "medium",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 3326.575,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 2,
@@ -231,6 +276,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2025,
+          "Month": 9,
+          "predicted_visits": 574432.805,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2025,
           "Month": 12,
@@ -249,6 +303,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 3205.845,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2025,
           "Month": 12,
@@ -265,6 +328,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2025,
+          "Month": 12,
+          "predicted_visits": 41620.11,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -375,6 +447,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2025,
+          "Month": 10,
+          "predicted_visits": 851.93,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 1,
@@ -427,6 +508,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2025,
+          "Month": 11,
+          "predicted_visits": 14449.005,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -495,6 +585,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 32967.27,
+          "crowd_level": "low",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -596,6 +695,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 40690.625,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 1,
@@ -639,6 +747,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2025,
+          "Month": 10,
+          "predicted_visits": 75997.47,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -686,6 +803,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 162803.425,
+          "crowd_level": "low",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 8370.005,
+          "crowd_level": "medium",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 3,
@@ -713,6 +848,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2025,
+          "Month": 10,
+          "predicted_visits": 500264.05,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 1,
@@ -731,6 +875,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 8170.65,
+          "crowd_level": "medium",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 1,
@@ -747,6 +900,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 28734.8,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -857,6 +1019,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2025,
+          "Month": 11,
+          "predicted_visits": 118.47,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 2,
@@ -909,6 +1080,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2025,
+          "Month": 12,
+          "predicted_visits": 12810.505,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -977,6 +1157,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 45181.495,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -1078,6 +1267,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 53184.04,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 2,
@@ -1121,6 +1319,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2025,
+          "Month": 11,
+          "predicted_visits": 20830.195,
+          "crowd_level": "medium",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -1168,6 +1375,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 179389.97,
+          "crowd_level": "medium",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 5053.38,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 4,
@@ -1195,6 +1420,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2025,
+          "Month": 11,
+          "predicted_visits": 245126.16,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 2,
@@ -1213,6 +1447,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 5217.045,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 2,
@@ -1229,6 +1472,15 @@
           "crowd_level": "low",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 21348.75,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -1339,6 +1591,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2025,
+          "Month": 12,
+          "predicted_visits": 67.335,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 3,
@@ -1391,6 +1652,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 11578.9,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -1459,6 +1729,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 35583.885,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -1560,6 +1839,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 50118.125,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 3,
@@ -1603,6 +1891,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2025,
+          "Month": 12,
+          "predicted_visits": 4166.93,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -1650,6 +1947,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 424470.93,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 1159.015,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 5,
@@ -1677,6 +1992,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2025,
+          "Month": 12,
+          "predicted_visits": 194868.31,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 3,
@@ -1695,6 +2019,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 1175.27,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 3,
@@ -1711,6 +2044,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 86422.26,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -1821,6 +2163,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 52.7,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 4,
@@ -1873,6 +2224,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 11635.63,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -1941,6 +2301,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 68304.835,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -2042,6 +2411,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 41157.64,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 4,
@@ -2085,6 +2463,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 1576.235,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -2132,6 +2519,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 603421.29,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 28858.765,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 6,
@@ -2159,6 +2564,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 1,
+          "predicted_visits": 156989.145,
+          "crowd_level": "low",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 4,
@@ -2177,6 +2591,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 28857.965,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 4,
@@ -2193,6 +2616,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 140398.27,
+          "crowd_level": "medium",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -2303,6 +2735,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 81.54,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 5,
@@ -2355,6 +2796,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 20425.555,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -2423,6 +2873,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 486273.815,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -2524,6 +2983,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 39235.73,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 5,
@@ -2567,6 +3035,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 2444.21,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -2614,6 +3091,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 680197.535,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 46529.82,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 7,
@@ -2641,6 +3136,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 2,
+          "predicted_visits": 131671.2,
+          "crowd_level": "low",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 5,
@@ -2659,6 +3163,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 46523.83,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 5,
@@ -2675,6 +3188,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 181972.405,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -2785,6 +3307,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 260.315,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 6,
@@ -2837,6 +3368,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 47171.985,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -2905,6 +3445,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 812354.145,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -3006,6 +3555,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 41815.13,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 6,
@@ -3049,6 +3607,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 10651.045,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -3096,6 +3663,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 683286.845,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 42828.765,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 8,
@@ -3123,6 +3708,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 3,
+          "predicted_visits": 178035.845,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 6,
@@ -3141,6 +3735,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 42827.625,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 6,
@@ -3157,6 +3760,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 195595.955,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -3267,6 +3879,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 536.285,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 7,
@@ -3319,6 +3940,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 66651.39,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -3387,6 +4017,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 994662.29,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -3488,6 +4127,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 33575.52,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 7,
@@ -3531,6 +4179,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 14020.205,
+          "crowd_level": "medium",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -3578,6 +4235,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 585743.58,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 43195.6,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 9,
@@ -3605,6 +4280,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 4,
+          "predicted_visits": 318659.41,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 7,
@@ -3623,6 +4307,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 43099.285,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 7,
@@ -3639,6 +4332,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 199297.365,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -3749,6 +4451,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 5320.57,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 8,
@@ -3801,6 +4512,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 113170.14,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -3869,6 +4589,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 946467.69,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -3970,6 +4699,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 23391.655,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 8,
@@ -4013,6 +4751,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 66255.435,
+          "crowd_level": "medium",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -4060,6 +4807,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 525772.08,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 26182.695,
+          "crowd_level": "medium",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 10,
@@ -4087,6 +4852,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 5,
+          "predicted_visits": 507366.825,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 8,
@@ -4105,6 +4879,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 26724.54,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 8,
@@ -4121,6 +4904,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 202411.66,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -4231,6 +5023,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 27243.45,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 9,
@@ -4283,6 +5084,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 118935.51,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -4351,6 +5161,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 887522.525,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -4452,6 +5271,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 15902.35,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 9,
@@ -4495,6 +5323,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 143565.535,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -4542,6 +5379,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 511398.295,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 12558.25,
+          "crowd_level": "medium",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 11,
@@ -4569,6 +5424,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 6,
+          "predicted_visits": 659041.67,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 9,
@@ -4587,6 +5451,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 12388.57,
+          "crowd_level": "medium",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 9,
@@ -4603,6 +5476,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 180183.045,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -4713,6 +5595,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 16302.81,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 10,
@@ -4765,6 +5656,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 110752.26,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -4833,6 +5733,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 376663.525,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -4934,6 +5843,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 30736.105,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 10,
@@ -4977,6 +5895,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 164422.585,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -5024,6 +5951,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 476741.865,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 3280.755,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2026,
           "Month": 12,
@@ -5051,6 +5996,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 7,
+          "predicted_visits": 695031.005,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 10,
@@ -5069,6 +6023,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 3316.91,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 10,
@@ -5085,6 +6048,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 372443.035,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -5195,6 +6167,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 31561.67,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 11,
@@ -5247,6 +6228,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 81879.75,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -5315,6 +6305,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 53846.68,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -5416,6 +6415,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 36547.42,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 11,
@@ -5459,6 +6467,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 162155.1,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -5506,6 +6523,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 354935.71,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 1128.58,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 1,
@@ -5533,6 +6568,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 8,
+          "predicted_visits": 689831.82,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 11,
@@ -5551,6 +6595,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 1103.23,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 11,
@@ -5567,6 +6620,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 194410.915,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -5677,6 +6739,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 11206.445,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2026,
           "Month": 12,
@@ -5729,6 +6800,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 38193.95,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -5797,6 +6877,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 33984.04,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -5898,6 +6987,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 32100.16,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2026,
           "Month": 12,
@@ -5941,6 +7039,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 137785.7,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -5988,6 +7095,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 305823.855,
+          "crowd_level": "medium",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 4177.455,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 2,
@@ -6015,6 +7140,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 9,
+          "predicted_visits": 637255.04,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2026,
           "Month": 12,
@@ -6033,6 +7167,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 3977.64,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2026,
           "Month": 12,
@@ -6049,6 +7192,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 46048.03,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -6159,6 +7311,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 1340.965,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 1,
@@ -6211,6 +7372,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 17756.31,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -6279,6 +7449,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 35977.545,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -6380,6 +7559,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 40745.43,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 1,
@@ -6423,6 +7611,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 85858.31,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -6470,6 +7667,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 184690.385,
+          "crowd_level": "medium",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 7219.0,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 3,
@@ -6497,6 +7712,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 10,
+          "predicted_visits": 500776.635,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 1,
@@ -6515,6 +7739,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 9506.44,
+          "crowd_level": "medium",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 1,
@@ -6531,6 +7764,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 37475.065,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -6641,6 +7883,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 141.165,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 2,
@@ -6693,6 +7944,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 11320.575,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -6761,6 +8021,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 44009.695,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -6862,6 +8131,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 54876.5,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 2,
@@ -6905,6 +8183,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 23082.75,
+          "crowd_level": "medium",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -6952,6 +8239,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 200942.94,
+          "crowd_level": "medium",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 6527.57,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 4,
@@ -6979,6 +8284,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 11,
+          "predicted_visits": 284354.32,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 2,
@@ -6997,6 +8311,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 6698.105,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 2,
@@ -7013,6 +8336,15 @@
           "crowd_level": "low",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 25922.33,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -7123,6 +8455,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 100.145,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 3,
@@ -7175,6 +8516,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 11681.52,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -7243,6 +8593,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 40332.635,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -7344,6 +8703,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 52119.055,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 3,
@@ -7387,6 +8755,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 7051.065,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -7434,6 +8811,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 429429.64,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 1697.795,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 5,
@@ -7461,6 +8856,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2026,
+          "Month": 12,
+          "predicted_visits": 212576.71,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 3,
@@ -7479,6 +8883,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 1671.44,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 3,
@@ -7495,6 +8908,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 72837.54,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -7605,6 +9027,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 61.525,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 4,
@@ -7657,6 +9088,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 11801.765,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -7725,6 +9165,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 68515.11,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -7826,6 +9275,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 44074.505,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 4,
@@ -7869,6 +9327,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 2630.055,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -7916,6 +9383,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 674443.3,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 31428.99,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 6,
@@ -7943,6 +9428,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 1,
+          "predicted_visits": 173775.76,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 4,
@@ -7961,6 +9455,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 30413.7,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 4,
@@ -7977,6 +9480,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 141418.61,
+          "crowd_level": "medium",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -8087,6 +9599,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 102.39,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 5,
@@ -8139,6 +9660,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 20616.005,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -8207,6 +9737,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 473117.775,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -8308,6 +9847,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 38899.11,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 5,
@@ -8351,6 +9899,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 3427.16,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -8398,6 +9955,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 725965.715,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 46604.185,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 7,
@@ -8425,6 +10000,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 2,
+          "predicted_visits": 149068.7,
+          "crowd_level": "low",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 5,
@@ -8443,6 +10027,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 46989.085,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 5,
@@ -8459,6 +10052,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 189079.95,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -8569,6 +10171,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 258.495,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 6,
@@ -8621,6 +10232,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 50297.035,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -8689,6 +10309,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 761974.805,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -8790,6 +10419,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 40079.21,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 6,
@@ -8833,6 +10471,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 11694.095,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -8880,6 +10527,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 718524.305,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 43652.065,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 8,
@@ -8907,6 +10572,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 3,
+          "predicted_visits": 198133.915,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 6,
@@ -8925,6 +10599,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 43913.22,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 6,
@@ -8941,6 +10624,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 200411.41,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -9051,6 +10743,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 590.68,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 7,
@@ -9103,6 +10804,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 72266.12,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -9171,6 +10881,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 987604.37,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -9272,6 +10991,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 35824.19,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 7,
@@ -9315,6 +11043,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 15953.37,
+          "crowd_level": "medium",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -9362,6 +11099,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 690298.345,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 44439.09,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 9,
@@ -9389,6 +11144,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 4,
+          "predicted_visits": 357520.275,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 7,
@@ -9407,6 +11171,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 44392.665,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 7,
@@ -9423,6 +11196,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 211162.115,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -9533,6 +11315,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 5015.88,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 8,
@@ -9585,6 +11376,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 121067.435,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -9653,6 +11453,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 972270.455,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -9754,6 +11563,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 25290.605,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 8,
@@ -9797,6 +11615,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 69392.515,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -9844,6 +11671,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 576322.015,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 27429.395,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 10,
@@ -9871,6 +11716,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 5,
+          "predicted_visits": 525536.075,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 8,
@@ -9889,6 +11743,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 27350.87,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 8,
@@ -9905,6 +11768,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 221167.01,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -10015,6 +11887,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 26904.045,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 9,
@@ -10067,6 +11948,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 142599.685,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -10135,6 +12025,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 961230.26,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -10236,6 +12135,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 23021.445,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 9,
@@ -10279,6 +12187,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 140490.495,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -10326,6 +12243,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 487047.76,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 13963.385,
+          "crowd_level": "medium",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 11,
@@ -10353,6 +12288,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 6,
+          "predicted_visits": 693603.835,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 9,
@@ -10371,6 +12315,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 14035.455,
+          "crowd_level": "medium",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 9,
@@ -10387,6 +12340,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 193637.875,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -10497,6 +12459,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 18394.385,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 10,
@@ -10549,6 +12520,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 123051.27,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -10617,6 +12597,15 @@
           "crowd_level": "high",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 396943.92,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -10718,6 +12707,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 34456.745,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 10,
@@ -10761,6 +12759,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 185168.765,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -10808,6 +12815,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 509700.445,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 5165.915,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2027,
           "Month": 12,
@@ -10835,6 +12860,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 7,
+          "predicted_visits": 784119.94,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 10,
@@ -10853,6 +12887,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 5839.49,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 10,
@@ -10869,6 +12912,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 370632.33,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -10979,6 +13031,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 30626.635,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 11,
@@ -11031,6 +13092,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 82356.385,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -11099,6 +13169,15 @@
           "crowd_level": "high",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 96072.985,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -11200,6 +13279,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 36806.43,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 11,
@@ -11243,6 +13331,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 185104.455,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -11290,6 +13387,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 388695.37,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 2943.065,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 1,
@@ -11317,6 +13432,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 8,
+          "predicted_visits": 765221.455,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 11,
@@ -11335,6 +13459,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 2686.12,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 11,
@@ -11351,6 +13484,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 213118.69,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -11461,6 +13603,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 11967.55,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2027,
           "Month": 12,
@@ -11513,6 +13664,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 47003.015,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -11581,6 +13741,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 38264.66,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -11682,6 +13851,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 35129.19,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2027,
           "Month": 12,
@@ -11725,6 +13903,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 137983.9,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -11772,6 +13959,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 332774.46,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 4247.02,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 2,
@@ -11799,6 +14004,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 9,
+          "predicted_visits": 695593.08,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2027,
           "Month": 12,
@@ -11817,6 +14031,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 4330.54,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2027,
           "Month": 12,
@@ -11833,6 +14056,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 56351.075,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -11943,6 +14175,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 3168.255,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 1,
@@ -11995,6 +14236,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 22705.155,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -12063,6 +14313,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 38110.505,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -12164,6 +14423,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 40751.66,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 1,
@@ -12207,6 +14475,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 93987.895,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -12254,6 +14531,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 229861.89,
+          "crowd_level": "medium",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 7005.295,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 3,
@@ -12281,6 +14576,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 10,
+          "predicted_visits": 533916.63,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 1,
@@ -12299,6 +14603,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 9685.765,
+          "crowd_level": "medium",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 1,
@@ -12315,6 +14628,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 41680.05,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -12425,6 +14747,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 203.055,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 2,
@@ -12477,6 +14808,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 13270.91,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -12545,6 +14885,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 43836.045,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -12646,6 +14995,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 53218.69,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 2,
@@ -12689,6 +15047,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 33666.68,
+          "crowd_level": "medium",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -12736,6 +15103,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 238355.605,
+          "crowd_level": "medium",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 7992.255,
+          "crowd_level": "medium",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 4,
@@ -12763,6 +15148,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 11,
+          "predicted_visits": 303406.68,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 2,
@@ -12781,6 +15175,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 8036.055,
+          "crowd_level": "medium",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 2,
@@ -12797,6 +15200,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 32574.135,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -12907,6 +15319,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 160.58,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 3,
@@ -12959,6 +15380,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 12234.615,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -13027,6 +15457,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 45177.965,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -13128,6 +15567,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 52887.8,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 3,
@@ -13171,6 +15619,15 @@
           "crowd_level": "low",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 10768.705,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -13218,6 +15675,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 450356.135,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 2112.545,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 5,
@@ -13245,6 +15720,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2027,
+          "Month": 12,
+          "predicted_visits": 202104.955,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 3,
@@ -13263,6 +15747,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 1834.73,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 3,
@@ -13279,6 +15772,15 @@
           "crowd_level": "medium",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 66856.78,
+          "crowd_level": "low",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -13389,6 +15891,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 110.885,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 4,
@@ -13441,6 +15952,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 12218.73,
+          "crowd_level": "low",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -13509,6 +16029,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 68089.445,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -13610,6 +16139,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 44992.8,
+          "crowd_level": "medium",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 4,
@@ -13653,6 +16191,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 6399.21,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -13700,6 +16247,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 718507.88,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 30832.885,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 6,
@@ -13727,6 +16292,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2028,
+          "Month": 1,
+          "predicted_visits": 200542.61,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 4,
@@ -13745,6 +16319,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 31665.065,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 4,
@@ -13761,6 +16344,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 146283.065,
+          "crowd_level": "medium",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -13871,6 +16463,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 127.865,
+          "crowd_level": "low",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 5,
@@ -13923,6 +16524,15 @@
           "crowd_level": "low",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 20575.935,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -13991,6 +16601,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 466776.555,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -14092,6 +16711,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 37878.92,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 5,
@@ -14135,6 +16763,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 6054.2,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -14182,6 +16819,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 798421.71,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 48875.16,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 7,
@@ -14209,6 +16864,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2028,
+          "Month": 2,
+          "predicted_visits": 160573.645,
+          "crowd_level": "low",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 5,
@@ -14227,6 +16891,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 49542.24,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 5,
@@ -14243,6 +16916,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 189491.56,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -14353,6 +17035,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 245.83,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 6,
@@ -14405,6 +17096,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 53895.565,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -14473,6 +17173,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 739627.835,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -14574,6 +17283,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 38655.88,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 6,
@@ -14617,6 +17335,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 11751.96,
+          "crowd_level": "low",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -14664,6 +17391,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 811415.965,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 49085.535,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 8,
@@ -14691,6 +17436,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2028,
+          "Month": 3,
+          "predicted_visits": 235002.35,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 6,
@@ -14709,6 +17463,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 48786.695,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 6,
@@ -14725,6 +17488,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 207372.1,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -14835,6 +17607,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 756.83,
+          "crowd_level": "medium",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 7,
@@ -14887,6 +17668,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 78758.64,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -14955,6 +17745,15 @@
           "crowd_level": "low",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 982766.305,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -15056,6 +17855,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 37372.95,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 7,
@@ -15099,6 +17907,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 17416.28,
+          "crowd_level": "medium",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -15146,6 +17963,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 779381.11,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 49136.455,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 9,
@@ -15173,6 +18008,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2028,
+          "Month": 4,
+          "predicted_visits": 387863.0,
+          "crowd_level": "medium",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 7,
@@ -15191,6 +18035,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 48568.755,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 7,
@@ -15207,6 +18060,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 231413.03,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -15317,6 +18179,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 4994.97,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 8,
@@ -15369,6 +18240,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 127975.78,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -15437,6 +18317,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 1019358.705,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -15538,6 +18427,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 9,
+          "predicted_visits": 26686.925,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 8,
@@ -15581,6 +18479,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 68200.14,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -15628,6 +18535,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 684286.225,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 9,
+          "predicted_visits": 28239.41,
+          "crowd_level": "high",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 10,
@@ -15655,6 +18580,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2028,
+          "Month": 5,
+          "predicted_visits": 531486.135,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 8,
@@ -15673,6 +18607,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 9,
+          "predicted_visits": 27818.035,
+          "crowd_level": "high",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 8,
@@ -15689,6 +18632,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 232517.475,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -15799,6 +18751,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 25185.44,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 9,
@@ -15851,6 +18812,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 149715.975,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -15919,6 +18889,15 @@
           "crowd_level": "medium",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 9,
+          "predicted_visits": 982467.715,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -16020,6 +18999,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 10,
+          "predicted_visits": 25378.67,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 9,
@@ -16063,6 +19051,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 138354.43,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -16110,6 +19107,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 9,
+          "predicted_visits": 526659.37,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 10,
+          "predicted_visits": 15916.955,
+          "crowd_level": "medium",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 11,
@@ -16137,6 +19152,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2028,
+          "Month": 6,
+          "predicted_visits": 765554.955,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 9,
@@ -16155,6 +19179,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 10,
+          "predicted_visits": 15415.56,
+          "crowd_level": "medium",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 9,
@@ -16171,6 +19204,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 9,
+          "predicted_visits": 182915.595,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -16281,6 +19323,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 27940.285,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 10,
@@ -16333,6 +19384,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 142568.465,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -16401,6 +19461,15 @@
           "crowd_level": "high",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 10,
+          "predicted_visits": 441879.06,
+          "crowd_level": "high",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -16502,6 +19571,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 11,
+          "predicted_visits": 36944.18,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 10,
@@ -16545,6 +19623,15 @@
           "crowd_level": "high",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 185687.165,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -16592,6 +19679,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 10,
+          "predicted_visits": 465007.625,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 11,
+          "predicted_visits": 5896.875,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2028,
           "Month": 12,
@@ -16619,6 +19724,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2028,
+          "Month": 7,
+          "predicted_visits": 794420.5,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 10,
@@ -16637,6 +19751,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 11,
+          "predicted_visits": 7595.175,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 10,
@@ -16653,6 +19776,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 10,
+          "predicted_visits": 375776.095,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -16763,6 +19895,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 32801.21,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 11,
@@ -16815,6 +19956,15 @@
           "crowd_level": "high",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 9,
+          "predicted_visits": 85520.135,
+          "crowd_level": "high",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",
@@ -16883,6 +20033,15 @@
           "crowd_level": "high",
           "Latitude": 34.0069,
           "Longitude": -119.7785
+        },
+        {
+          "ParkName": "Yellowstone",
+          "Year": 2028,
+          "Month": 11,
+          "predicted_visits": 149522.73,
+          "crowd_level": "medium",
+          "Latitude": 44.428,
+          "Longitude": -110.5885
         },
         {
           "ParkName": "Grand Teton",
@@ -16984,6 +20143,15 @@
           "Longitude": -104.8855
         },
         {
+          "ParkName": "Virgin Islands",
+          "Year": 2028,
+          "Month": 12,
+          "predicted_visits": 36961.895,
+          "crowd_level": "low",
+          "Latitude": 18.3333,
+          "Longitude": -64.7333
+        },
+        {
           "ParkName": "Dry Tortugas",
           "Year": 2028,
           "Month": 11,
@@ -17027,6 +20195,15 @@
           "crowd_level": "medium",
           "Latitude": 48.7718,
           "Longitude": -121.2985
+        },
+        {
+          "ParkName": "Theodore Roosevelt",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 200983.105,
+          "crowd_level": "high",
+          "Latitude": 46.967,
+          "Longitude": -103.538
         },
         {
           "ParkName": "Arches",
@@ -17074,6 +20251,24 @@
           "Longitude": -111.1666
         },
         {
+          "ParkName": "Zion",
+          "Year": 2028,
+          "Month": 11,
+          "predicted_visits": 418871.095,
+          "crowd_level": "high",
+          "Latitude": 37.2982,
+          "Longitude": -113.0263
+        },
+        {
+          "ParkName": "Voyageurs",
+          "Year": 2028,
+          "Month": 12,
+          "predicted_visits": 4160.92,
+          "crowd_level": "low",
+          "Latitude": 48.4771,
+          "Longitude": -92.8349
+        },
+        {
           "ParkName": "Gateway Arch",
           "Year": 2029,
           "Month": 1,
@@ -17101,6 +20296,15 @@
           "Longitude": -117.0794
         },
         {
+          "ParkName": "Yosemite",
+          "Year": 2028,
+          "Month": 8,
+          "predicted_visits": 788990.32,
+          "crowd_level": "high",
+          "Latitude": 37.8651,
+          "Longitude": -119.5383
+        },
+        {
           "ParkName": "Badlands",
           "Year": 2028,
           "Month": 11,
@@ -17119,6 +20323,15 @@
           "Longitude": -159.2
         },
         {
+          "ParkName": "White Sands",
+          "Year": 2028,
+          "Month": 12,
+          "predicted_visits": 3625.71,
+          "crowd_level": "low",
+          "Latitude": 32.7872,
+          "Longitude": -106.3257
+        },
+        {
           "ParkName": "Crater Lake",
           "Year": 2028,
           "Month": 11,
@@ -17135,6 +20348,15 @@
           "crowd_level": "high",
           "Latitude": 41.2808,
           "Longitude": -81.5678
+        },
+        {
+          "ParkName": "Shenandoah",
+          "Year": 2028,
+          "Month": 11,
+          "predicted_visits": 228273.95,
+          "crowd_level": "high",
+          "Latitude": 38.4755,
+          "Longitude": -78.4535
         },
         {
           "ParkName": "Sequoia",
@@ -17245,6 +20467,15 @@
           "Longitude": -109.8783
         },
         {
+          "ParkName": "Wrangell-St. Elias",
+          "Year": 2028,
+          "Month": 9,
+          "predicted_visits": 14212.275,
+          "crowd_level": "high",
+          "Latitude": 61.7104,
+          "Longitude": -142.985
+        },
+        {
           "ParkName": "Redwood",
           "Year": 2028,
           "Month": 12,
@@ -17297,6 +20528,15 @@
           "crowd_level": "medium",
           "Latitude": 46.8799,
           "Longitude": -121.7269
+        },
+        {
+          "ParkName": "Wind Cave",
+          "Year": 2028,
+          "Month": 10,
+          "predicted_visits": 49831.215,
+          "crowd_level": "medium",
+          "Latitude": 43.57,
+          "Longitude": -103.48
         },
         {
           "ParkName": "Katmai",

@@ -1,13 +1,9 @@
 "use client";
 
+import React, { useEffect, useMemo, useState } from "react";
 import { MapContainer, TileLayer, Marker, Tooltip, useMap } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
-import "leaflet/dist/leaflet.css";
-import "leaflet.markercluster/dist/MarkerCluster.css";
-import "leaflet.markercluster/dist/MarkerCluster.Default.css";
-
 import L from "leaflet";
-import { useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 
 type Crowd = "low" | "medium" | "high";
@@ -22,16 +18,23 @@ type ParkPoint = {
   Longitude: number;
 };
 
-type Focus = {
-  lat: number;
-  lng: number;
-  zoom?: number;
-};
+type Focus = { lat: number; lng: number; zoom?: number };
 
 function crowdColor(level: Crowd) {
   if (level === "low") return "#2f855a";
   if (level === "medium") return "#d97706";
   return "#dc2626";
+}
+
+function parkSlug(input: string): string {
+  return String(input ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/[–—]/g, "-")
+    .replace(/['ʻ’]/g, "")
+    .replace(/[.]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 }
 
 function makeDotIcon(color: string) {
@@ -61,42 +64,74 @@ function MapFocus({ focus }: { focus: Focus | null }) {
 
     const lat = Number(focus.lat);
     const lng = Number(focus.lng);
-    const z = Number.isFinite(focus.zoom) ? focus.zoom! : 6;
-
+    const z = Number.isFinite(focus.zoom) ? Number(focus.zoom) : 6;
     if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
 
-    const nextZoom = Math.max(map.getZoom(), z);
-
-    // run after Leaflet settles
-    setTimeout(() => {
-      map.flyTo([lat, lng], nextZoom, {
-        animate: true,
-        duration: 0.9,
-        easeLinearity: 0.25,
-      });
-    }, 0);
-  }, [focus, map]);
+    requestAnimationFrame(() => {
+      try {
+      const nextZoom = z;
+        map.flyTo([lat, lng], nextZoom, { animate: true, duration: 0.9, easeLinearity: 0.25 });
+      } catch {}
+    });
+  }, [map, focus?.lat, focus?.lng, focus?.zoom]);
 
   return null;
 }
 
-
-export default function HomeMap({
-  points,
-  focus,
-}: {
-  points: ParkPoint[];
-  focus: Focus | null;
-}) {
+export default function HomeMap({ points, focus }: { points: ParkPoint[]; focus: Focus | null }) {
   const router = useRouter();
 
-  const icons = useMemo<Record<Crowd, L.DivIcon>>(() => {
-    return {
+  const [mounted, setMounted] = useState(false);
+  const [map, setMap] = useState<L.Map | null>(null);
+  const [mapReady, setMapReady] = useState(false);
+
+  // ✅ always runs (no early return before other hooks)
+  useEffect(() => setMounted(true), []);
+
+  // ✅ safePoints / icons are always computed (hook order stable)
+  const icons = useMemo<Record<Crowd, L.DivIcon>>(
+    () => ({
       low: makeDotIcon(crowdColor("low")),
       medium: makeDotIcon(crowdColor("medium")),
       high: makeDotIcon(crowdColor("high")),
+    }),
+    []
+  );
+
+  const safePoints = useMemo(() => {
+    return (points || []).filter((p) => {
+      const lat = Number(p.Latitude);
+      const lng = Number(p.Longitude);
+      return (
+        p &&
+        typeof p.ParkName === "string" &&
+        p.ParkName.trim().length > 0 &&
+        Number.isFinite(lat) &&
+        Number.isFinite(lng)
+      );
+    });
+  }, [points]);
+
+  // ✅ invalidateSize AFTER we have a map
+  useEffect(() => {
+    if (!map) return;
+
+    const kick = () => {
+      try {
+        map.invalidateSize();
+      } catch {}
     };
-  }, []);
+
+    const t1 = window.setTimeout(kick, 0);
+    const t2 = window.setTimeout(kick, 150);
+
+    window.addEventListener("resize", kick);
+    return () => {
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
+      window.removeEventListener("resize", kick);
+    };
+  }, [map]);
 
   return (
     <div
@@ -119,66 +154,85 @@ export default function HomeMap({
           alignItems: "center",
         }}
       >
-        <div style={{ fontWeight: 900, color: "#1f3d2b" }}>
-          National Parks — Crowd Forecast Map
-        </div>
-        <div style={{ fontSize: 12, color: "#4b6b57", fontWeight: 700 }}>
-          Click a park
-        </div>
+        <div style={{ fontWeight: 900, color: "#1f3d2b" }}>National Parks — Crowd Forecast Map</div>
+        <div style={{ fontSize: 12, color: "#4b6b57", fontWeight: 700 }}>Click a park</div>
       </div>
 
       {/* Map */}
       <div style={{ height: 420, position: "relative", zIndex: 0 }}>
-        <MapContainer
-          center={[39.5, -98.35]}
-          zoom={3}
-          minZoom={3}
-          maxZoom={7}
-          scrollWheelZoom
-          style={{ height: "100%", width: "100%", zIndex: 0 }}
-          maxBounds={[
-            [-35, -180], // include American Samoa
-            [80, -50],
-          ]}
-          maxBoundsViscosity={1.0}
-        >
-          <MapFocus focus={focus} />
-
-          <TileLayer
-            attribution="&copy; OpenStreetMap contributors"
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-          />
-
-          <MarkerClusterGroup
-            chunkedLoading
-            zoomToBoundsOnClick
-            spiderfyOnMaxZoom
-            showCoverageOnHover={false}
-            maxClusterRadius={44}
-            spiderLegPolylineOptions={{ weight: 1.2, opacity: 0.35 }}
-            disableClusteringAtZoom={7}
+        {/* ✅ render the map ONLY after mounted, but without early-returning */}
+        {mounted ? (
+          <MapContainer
+            center={[39.5, -98.35]}
+            zoom={3}
+            minZoom={3}
+            maxZoom={7}
+            scrollWheelZoom
+            style={{ height: "100%", width: "100%", zIndex: 0 }}
+            maxBounds={[
+              [-35, -180],
+              [80, -50],
+            ]}
+            maxBoundsViscosity={1.0}
+            whenCreated={(m) => setMap(m)}
+            whenReady={() => {
+              setMapReady(true);
+              setTimeout(() => {
+                try {
+                  map?.invalidateSize();
+                } catch {}
+              }, 0);
+            }}
           >
-            {points.map((p) => (
-              <Marker
-                key={`${p.ParkName}-${p.Latitude}-${p.Longitude}`}
-                position={[Number(p.Latitude), Number(p.Longitude)]}
-                icon={icons[p.crowd_level]}
-                eventHandlers={{
-                  click: () =>
-                    router.push(`/parks/${encodeURIComponent(p.ParkName)}`),
-                }}
-              >
-                <Tooltip direction="top" offset={[0, -6]} opacity={1} sticky>
-                  <div style={{ fontWeight: 800 }}>{p.ParkName}</div>
-                  <div style={{ fontSize: 12 }}>
-                    {p.Year}-{String(p.Month).padStart(2, "0")} •{" "}
-                    {p.crowd_level.toUpperCase()}
-                  </div>
-                </Tooltip>
-              </Marker>
-            ))}
-          </MarkerClusterGroup>
-        </MapContainer>
+            <MapFocus focus={focus} />
+
+            {/* Render layers only when leaflet is ready */}
+            {mapReady && (
+              <>
+                <TileLayer
+                  attribution="&copy; OpenStreetMap contributors"
+                  url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+                />
+
+                <MarkerClusterGroup
+                  chunkedLoading
+                  zoomToBoundsOnClick
+                  spiderfyOnMaxZoom
+                  showCoverageOnHover={false}
+                  maxClusterRadius={44}
+                  spiderLegPolylineOptions={{ weight: 1.2, opacity: 0.35 }}
+                  disableClusteringAtZoom={7}
+                >
+                  {safePoints.map((p) => {
+                    const lat = Number(p.Latitude);
+                    const lng = Number(p.Longitude);
+
+                    return (
+                      <Marker
+                        key={`${p.ParkName}-${lat}-${lng}`}
+                        position={[lat, lng]}
+                        icon={icons[p.crowd_level]}
+                        eventHandlers={{
+                          click: () => router.push(`/parks/${parkSlug(p.ParkName)}`),
+                        }}
+                      >
+                        <Tooltip direction="top" offset={[0, -6]} opacity={1} sticky>
+                          <div style={{ fontWeight: 800 }}>{p.ParkName}</div>
+                          <div style={{ fontSize: 12 }}>
+                            {p.Year}-{String(p.Month).padStart(2, "0")} • {p.crowd_level.toUpperCase()}
+                          </div>
+                        </Tooltip>
+                      </Marker>
+                    );
+                  })}
+                </MarkerClusterGroup>
+              </>
+            )}
+          </MapContainer>
+        ) : (
+          // optional placeholder to preserve height
+          <div style={{ height: "100%", width: "100%" }} />
+        )}
       </div>
     </div>
   );
