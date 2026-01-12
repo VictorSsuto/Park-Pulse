@@ -5,15 +5,8 @@ from pathlib import Path
 import joblib
 import pandas as pd
 
-# ---------------------------------------------------------------------
-# Paths
-# ---------------------------------------------------------------------
-
 MODEL_PATH = Path(__file__).parent / "artifacts" / "monthly_model.joblib"
 
-# ---------------------------------------------------------------------
-# Crowd-level helpers
-# ---------------------------------------------------------------------
 
 def compute_crowd_thresholds(
     park_hist: pd.DataFrame,
@@ -153,7 +146,7 @@ def recursive_forecast_monthly(
             }
         )
 
-        # 🔁 recursion step
+        # recursion step
         values.append(y_pred)
         last_year, last_month = y, m
 

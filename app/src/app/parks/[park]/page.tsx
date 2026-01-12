@@ -83,7 +83,7 @@ export default function ParkPage() {
   const decoded = useMemo(() => decodeURIComponent(parkParam), [parkParam]);
   const slug = useMemo(() => parkSlug(decoded), [decoded]);
 
-  // ✅ assumes you renamed all images to lowercase .jpg
+  //  assumes you renamed all images to lowercase .jpg
   const heroSrc = useMemo(() => `/parks-hero/${slug}.jpg`, [slug]);
 
   const [months, setMonths] = useState(36);
@@ -167,14 +167,14 @@ export default function ParkPage() {
             {displayParkName}
           </h1>
 
-          {/* ✅ state under park name */}
+          {/*  state under park name */}
           {state && (
             <p className="text-white/80 font-semibold tracking-wide uppercase mb-3">
               {state}
             </p>
           )}
 
-          {/* ✅ slogan */}
+          {/*  slogan */}
           <p className="text-white/90 drop-shadow-sm text-lg md:text-xl max-w-2xl">
             {quote}
           </p>

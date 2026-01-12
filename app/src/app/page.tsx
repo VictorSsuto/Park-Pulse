@@ -155,11 +155,11 @@ export default function Home() {
      {/* Controls */}
 <div className="max-w-6xl mx-auto px-6 -mt-8 relative z-10">
   <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-8">
-    {/* ✅ align top */}
+    {/*  align top */}
     <div className="flex flex-col md:flex-row md:items-start gap-6">
       {/* LEFT: Search */}
       <div className="flex-1">
-        {/* ✅ spacer so both columns have same top label height */}
+        {/*  spacer so both columns have same top label height */}
         <div className="text-sm font-bold text-transparent mb-2">Forecast month</div>
 
        <ParkSearch
@@ -167,7 +167,7 @@ export default function Home() {
   onChange={(v) => {
     setPark(v);
 
-    // ✅ Clear selection → reset map to default view
+    //  Clear selection → reset map to default view
     if (v.trim() === "") {
       setSelectedSlug(null);
       setFocus(DEFAULT_FOCUS);

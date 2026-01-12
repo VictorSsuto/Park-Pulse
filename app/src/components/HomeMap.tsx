@@ -94,7 +94,7 @@ export default function HomeMap({
   const [mounted, setMounted] = useState(false);
   const [mapReady, setMapReady] = useState(false);
 
-  // ✅ use ref instead of whenCreated (TS-safe in react-leaflet v4+)
+  //  use ref instead of whenCreated (TS-safe in react-leaflet v4+)
   const mapRef = useRef<LeafletMap | null>(null);
 
   useEffect(() => setMounted(true), []);
@@ -122,7 +122,7 @@ export default function HomeMap({
     });
   }, [points]);
 
-  // ✅ invalidateSize AFTER map exists
+  //  invalidateSize AFTER map exists
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;

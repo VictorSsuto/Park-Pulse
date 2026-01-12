@@ -94,11 +94,7 @@ export async function getParksIndex(): Promise<ParksIndexItem[]> {
   return normalized;
 }
 
-/**
- * Back-compat: return string[] of park names.
- * IMPORTANT: now sourced from parks_index.json (NOT parks.json),
- * so no typos / missing parks.
- */
+
 export async function getParks(): Promise<string[]> {
   const index = await getParksIndex();
   return index.map((p) => p.name);
@@ -114,13 +110,7 @@ export async function getMapByIndex(): Promise<MapByIndex> {
   return data;
 }
 
-/**
- * Forecast files live at:
- * /public/data/forecasts/<slug>.json
- *
- * Now that your forecasts folder is standardized, we only fetch:
- * /data/forecasts/${parkSlug(nameOrSlug)}.json
- */
+
 export async function getForecast(parkNameOrSlug: string): Promise<ForecastResponse> {
   const raw = String(parkNameOrSlug ?? "").trim();
   if (!raw) throw new Error("parkName is required");
