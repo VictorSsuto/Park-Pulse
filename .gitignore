@@ -8,10 +8,10 @@ __pycache__/
 venv/
 
 # Data
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+ml/data/raw/*
+ml/data/processed/*
+!ml/data/raw/.gitkeep
+!ml/data/processed/.gitkeep
 
 # ML artifacts
 ml/artifacts/*
@@ -22,3 +22,4 @@ ml/artifacts/*
 
 # Streamlit
 .streamlit/
+

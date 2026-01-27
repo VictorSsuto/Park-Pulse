@@ -14,8 +14,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 
-DATA_PATH = Path("data/processed/modeling_dataset_monthly.csv")
-ARTIFACTS_PATH = Path("ml/artifacts")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_PATH = PROJECT_ROOT / "ml" / "data" / "processed" / "modeling_dataset_monthly.csv"
+ARTIFACTS_PATH = Path(__file__).resolve().parent / "artifacts"
 
 
 def main() -> None:
@@ -167,7 +168,7 @@ def main() -> None:
     # ------------------------------------------------------------------
     # Copy plot into Next.js public folder (for UI)
     # ------------------------------------------------------------------
-    public_plot_dir = Path("public/model")
+    public_plot_dir = PROJECT_ROOT / "frontend" / "public" / "model"
     public_plot_dir.mkdir(parents=True, exist_ok=True)
     public_plot_path = public_plot_dir / "monthly_actual_vs_pred.png"
     shutil.copyfile(plot_path, public_plot_path)

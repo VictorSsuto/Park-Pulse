@@ -1,8 +1,9 @@
 from pathlib import Path
 import pandas as pd
 
-INPUT_DIR = Path("data/63 park")
-OUTPUT_CSV = Path("data/raw/nps_recreation_visits_monthly.csv")
+DATA_ROOT = Path(__file__).resolve().parent / "data"
+INPUT_DIR = DATA_ROOT / "63 park"
+OUTPUT_CSV = DATA_ROOT / "raw" / "nps_recreation_visits_monthly.csv"
 
 MONTH_MAP = {
     "JAN": 1, "FEB": 2, "MAR": 3, "APR": 4,
@@ -109,7 +110,7 @@ def main():
 
     print(" Monthly CSV created successfully")
     print("Saved to:", OUTPUT_CSV.resolve())
-    print("Rows:", len(inal_df))
+    print("Rows:", len(final_df))
     print("Parks processed:", final_df["ParkName"].nunique())
 
     if bad_files:

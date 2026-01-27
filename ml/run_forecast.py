@@ -7,8 +7,8 @@ def main():
 
     # Always resolve paths from project root
     PROJECT_ROOT = Path(__file__).resolve().parents[1]
-    data_path = PROJECT_ROOT / "data" / "processed" / "modeling_dataset_monthly.csv"
-    out_path = PROJECT_ROOT / "data" / "processed" / "forecast_all_parks_36m.csv"
+    data_path = PROJECT_ROOT / "ml" / "data" / "processed" / "modeling_dataset_monthly.csv"
+    out_path = PROJECT_ROOT / "ml" / "data" / "processed" / "forecast_all_parks_36m.csv"
 
     df = pd.read_csv(data_path)
     df["ParkName"] = df["ParkName"].astype(str).str.strip()
