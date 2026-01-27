@@ -6,8 +6,8 @@ from functools import lru_cache
 
 app = FastAPI()
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-FORECAST_PATH = PROJECT_ROOT / "data" / "processed" / "forecast_all_parks_36m.csv"
-META_PATH = PROJECT_ROOT / "data" / "parks_metadata.csv"
+FORECAST_PATH = PROJECT_ROOT / "ml" / "data" / "processed" / "forecast_all_parks_36m.csv"
+META_PATH = PROJECT_ROOT / "ml" / "data" / "parks_metadata.csv"
 
 @lru_cache(maxsize=1)
 def load_meta_df() -> pd.DataFrame:
@@ -18,15 +18,6 @@ def load_meta_df() -> pd.DataFrame:
     return meta
 
 @lru_cache(maxsize=1)
-def load_forecast_df() -> pd.DataFrame:
-    if not FORECAST_PATH.exists():
-        raise HTTPException(500, f"Forecast file not found: {FORECAST_PATH}")
-    df = pd.read_csv(FORECAST_PATH)
-    df["ParkName"] = df["ParkName"].astype(str).str.strip()
-    return df
-
-
-
 def load_forecast_df() -> pd.DataFrame:
     if not FORECAST_PATH.exists():
         raise HTTPException(500, f"Forecast file not found: {FORECAST_PATH}")

@@ -41,17 +41,20 @@ Users can explore parks, view predicted visitation trends, and discover destinat
 
 ```
 Park-Pulse/
-├── app/ # Next.js application (deployed)
-│ ├── public/ # Static assets (park images, icons)
+├── frontend/ # Next.js application (deployed)
+│ ├── public/ # Static assets (park images, icons, data JSON)
 │ ├── src/
 │ │ ├── app/ # App Router pages
 │ │ ├── components/ # Reusable UI components
 │ │ └── lib/ # Utilities and helpers
 │ ├── package.json
 │ └── next.config.ts
-├── api/ # Backend / API experiments
-├── data/ # Datasets and preprocessing
-├── ml/ # Forecasting / ML experiments
+├── backend/ # FastAPI service
+├── ml/ # Forecasting / data prep
+│ ├── data/ # raw/processed/model datasets
+│ └── artifacts/ # trained models, plots
+├── scripts/ # helper scripts
+├── public/ # shared static assets (legacy)
 └── README.md
 ```
 

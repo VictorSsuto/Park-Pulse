@@ -4,7 +4,7 @@ from pathlib import Path
 import pandas as pd
 
 DATA_URL = "https://raw.githubusercontent.com/melaniewalsh/responsible-datasets-in-context/main/datasets/national-parks/US-National-Parks_RecreationVisits_1979-2024.csv"
-OUT_PATH = Path("data/raw/nps_recreation_visits_1979_2024.csv")
+OUT_PATH = Path(__file__).resolve().parent / "data" / "raw" / "nps_recreation_visits_1979_2024.csv"
 
 
 def main() -> None:

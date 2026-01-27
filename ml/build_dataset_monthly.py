@@ -1,8 +1,9 @@
 from pathlib import Path
 import pandas as pd
 
-RAW_DATA_PATH = Path("data/raw/nps_recreation_visits_monthly.csv")
-OUT_DATA_PATH = Path("data/processed/modeling_dataset_monthly.csv")
+DATA_ROOT = Path(__file__).resolve().parent / "data"
+RAW_DATA_PATH = DATA_ROOT / "raw" / "nps_recreation_visits_monthly.csv"
+OUT_DATA_PATH = DATA_ROOT / "processed" / "modeling_dataset_monthly.csv"
 
 def month_to_season(month: int) -> str:
     if month in [12, 1, 2]:
